@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="./style.css"> -->
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    padding: 10px;
+}
+.container{
+    border: 2px solid black;
+    width: 80%;
+    margin: auto;
+    min-height: 90vh;
+    padding: 10px;
+}
+.row{
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center; 
+   margin-bottom: 80px;
+}
+#box{
+    width:150px;
+    height: 50px;
+    border: 1px solid black;
+    transition: background-color 5s;
+}
+#r1 .one{
+    background-color: blue;
+    transition-delay: 1s;
+}
+#r2 .one{
+    background-color: red;
+    transition-delay: 2s;
+}
+#r3 .one{
+    background-color: yellow;
+    transition-delay: 3s;
+}
+#r4 .one{
+    background-color: green;
+    transition-delay: 4s;
+}
+
+#r1 .two{
+    background-color: blue;
+    transition-delay: 5s;
+}
+#r2 .two{
+    background-color: red;
+    transition-delay: 6s;
+}
+#r3 .two{
+    background-color: yellow;
+    transition-delay: 7s;
+}
+#r4 .two{
+    background-color: green;
+    transition-delay: 8s;
+}
+
+#r1 .three{
+    background-color: blue;
+    transition-delay: 9s;
+}
+#r2 .three{
+    background-color: red;
+    transition-delay: 10s;
+}
+#r3 .three{
+    background-color: yellow;
+    transition-delay: 11s;
+}
+#r4 .three{
+    background-color: green;
+    transition-delay: 12s;
+}
+
+#r1 .four{
+    background-color: blue;
+    transition-delay: 13s;
+}
+#r2 .four{
+    background-color: red;
+    transition-delay: 14s;
+}
+#r3 .four{
+    background-color: yellow;
+    transition-delay: 15s;
+}
+#r1 .four{
+    background-color: green;
+    transition-delay: 16s;
+}
+
+.buttons{
+    text-align: center;
+}
+button{
+    border: none;
+    outline: none;
+    padding: 10px 32px;
+    margin-top: 10px;
+    background-color:green;
+    color: white;
+    cursor: pointer;
+}
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row row1">
+            <div id="box" class="one"></div>
+            <div id="box" class=""></div>
+            <div id="box" class="two"></div>
+            <div id="box" class=""></div>
+            <div id="box" class="three"></div>
+            <div id="box" class=""></div>
+            <div id="box" class="four"></div>
+            <div id="box" class=""></div>
+        </div>
+
+        <div class="row row2">
+            <div id="box" class=""></div>
+            <div id="box" class="one"></div>
+            <div id="box" class=""></div>
+            <div id="box" class="two"></div>
+            <div id="box" class=""></div>
+            <div id="box" class="three"></div>
+            <div id="box" class=""></div>
+            <div id="box" class="four"></div>
+        </div>
+
+        <div class="row row3">
+            <div id="box" class="one"></div>
+            <div id="box" class=""></div>
+            <div id="box" class="two"></div>
+            <div id="box" class=""></div>
+            <div id="box" class="three"></div>
+            <div id="box" class=""></div>
+            <div id="box" class="four"></div>
+            <div id="box" class=""></div>
+        </div>
+        <div class="row row4">
+            <div id="box" class=""></div>
+            <div id="box" class="one"></div>
+            <div id="box" class=""></div>
+            <div id="box" class="two"></div>
+            <div id="box" class=""></div>
+            <div id="box" class="three"></div>
+            <div id="box" class=""></div>
+            <div id="box" class="four"></div>
+        </div>
+
+    </div>
+
+    <div class="buttons">
+        <button id="start" onclick="start()">start</button>
+        <button id="reset" onclick="reset()">reset</button>
+    </div>
+    <script>
+function start(){
+    var myBox = document.querySelector(".row1");
+    myBox.setAttribute("id","r1");
+    var myBox = document.querySelector(".row2");
+    myBox.setAttribute("id","r2"); 
+    var myBox = document.querySelector(".row3");
+    myBox.setAttribute("id","r3");
+    var myBox = document.querySelector(".row4");
+    myBox.setAttribute("id","r4");
+}
+function reset(){
+    var myBox = document.querySelector(".row1");
+    myBox.removeAttribute("id","r1");
+    var myBox = document.querySelector(".row2");
+    myBox.removeAttribute("id","r2"); 
+    var myBox = document.querySelector(".row3");
+    myBox.removeAttribute("id","r3");
+    var myBox = document.querySelector(".row4");
+    myBox.removeAttribute("id","r4");
+}
+    </script>
+</body>
+</html>
